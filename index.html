@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata - Krishna Machhindra Gore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .biodata-container {
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-section h2 {
+            color: #ff5722;
+        }
+        .personal-details, .family-details, .other-details {
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 1.5em;
+            color: #3f51b5;
+            margin-bottom: 10px;
+        }
+        .section-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        .footer a {
+            color: #ff5722;
+            text-decoration: none;
+        }
+        .bio-image {
+            max-width: 100%;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .bio-image-caption {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .bio-image {
+                float: none;
+                display: block;
+                margin: 10px auto;
+                max-width: 80%;
+            }
+
+            .biodata-container {
+                padding: 10px;
+            }
+
+            .section-title {
+                font-size: 1.2em;
+            }
+
+            .section-content {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="biodata-container" id="biodata">
+        <!-- Header Section -->
+        <div class="header-section">
+            <img src="abc.png" alt="Ganesh Icon" style="width: 100px;">
+            <h2>|| श्री गणेश नमः ||</h2>
+            <h3>Bio Data</h3>
+        </div>
+
+        <!-- Add Image to the Top Right -->
+        <div style="text-align: right; margin-top: -60px;">
+            <img src="aa.jpeg" alt="Photo" class="bio-image" width="150">
+        </div>
+
+        <!-- Personal Details Section -->
+        <div class="personal-details">
+            <div class="section-title">Personal Details</div>
+            <div class="section-content">
+                <p><strong>मुलाचे नाव:</strong> चि. कृष्णा मच्छिंद्र गोरे</p>
+                <p><strong>जन्म तारीख:</strong> ०६/०५/२००२</p>
+                <p><strong>शिक्षण:</strong> BE (Mechanical Engineer)</p>
+                <p><strong>नोकरी:</strong> Supervisor - Enkei Wheels India Limited, Shikrapur, Pune</p>
+                <p><strong>रास:</strong> कुंभ</p>
+                <p><strong>राशिनाव:</strong> गोविंद</p>
+                <p><strong>देवक:</strong> सूर्यफूल</p>
+                <p><strong>जन्म वेळ:</strong> रविवार (रात्री ०२:०० am)</p>
+                <p><strong>उंची:</strong> ५.५</p>
+                <p><strong>रक्तगट:</strong> O+</p>
+                <p><strong>जन्म गाव:</strong> सोनविहिर, ता. शेवगाव, जि. अहिल्यानगर</p>
+            </div>
+        </div>
+
+        <!-- Family Details Section -->
+        <div class="family-details">
+            <div class="section-title">कुटुंबाची माहिती</div>
+            <div class="section-content">
+                <p><strong>वडिलांचे नाव:</strong> मच्छिंद्र विश्वनाथ गोरे</p>
+                <p><strong>वडिलांचा व्यवसाय:</strong> शेती</p>
+                <p><strong>आईचे नाव:</strong> हीरा मच्छिंद्र गोरे (गृहिणी)</p>
+                <p><strong>पत्ता:</strong> कमालपूर, ता. श्रीरामपूर, जि. अहिल्यानगर</p>
+                <p><strong>चुलते:</strong> 1. शेकूनाथ विश्वनाथ गोरे, 2. पंढरीनाथ विश्वनाथ गोरे, 3. बिबीशन विश्वनाथ गोरे</p>
+                <p><strong>बहिणी:</strong> 1. सुरेखा विजय सुरोशे (खलाल पिंपरी), 2. अनिता नितीन पाडळे (सुरेशनगर), 3. सुवर्णा राजेंद्र चावरे (जळके)</p>
+                <p><strong>काका:</strong> 1. दत्तात्रय निवृत्ती पठाडे (अंतरवली, शेवगाव)</p>
+                <p><strong>मामा:</strong> सुदाम विखे (सोनविहिर)</p>
+                <p><strong>नाते संबंध:</strong> विखे, पाडळे, सुरोशे, चावरे, आंबाडे, म्हस्के, पठाडे, घुले</p>
+            </div>
+        </div>
+
+        <!-- Other Details Section -->
+        <div class="other-details">
+            <div class="section-title">Other Details</div>
+            <div class="section-content">
+                <p>Here, you can add more personal information or any other section you want to include.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>&copy; 2025, Design by Vishal Karpe. <a href="#">Download Biodata</a></p>
+</div>
+
+<script>
+    async function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Add Title
+        doc.setFontSize(16);
+        doc.text("|| श्री गणेश नमः ||", 105, 20, { align: "center" });
+        doc.setFontSize(14);
+        doc.text("Bio Data", 105, 30, { align: "center" });
+
+        // Personal Details
+        let y = 40;
+        doc.setFontSize(12);
+        doc.text("मुलाचे नाव: चि. कृष्णा मच्छिंद्र गोरे", 10, y += 10);
+        doc.text("जन्म तारीख: ०६/०५/२००२", 10, y += 10);
+        doc.text("शिक्षण: BE (Mechanical Engineer)", 10, y += 10);
+        doc.text("नोकरी: Supervisor - Enkei Wheels India Limited, Shikrapur, Pune", 10, y += 10);
+        doc.text("रास: कुंभ", 10, y += 10);
+        doc.text("उंची: ५.५", 10, y += 10);
+        doc.text("रक्तगट: O+", 10, y += 10);
+        doc.text("जन्म गाव: सोनविहिर, ता. शेवगाव, जि. अहिल्यानगर", 10, y += 10);
+
+        // Family Details
+        doc.text("वडिलांचे नाव: मच्छिंद्र विश्वनाथ गोरे", 10, y += 15);
+        doc.text("वडिलांचा व्यवसाय: शेती", 10, y += 10);
+        doc.text("आईचे नाव: हीरा मच्छिंद्र गोरे (गृहिणी)", 10, y += 10);
+        doc.text("चुलते: 1. शेकूनाथ विश्वनाथ गोरे, 2. पंढरीनाथ विश्वनाथ गोरे, 3. बिबीशन विश्वनाथ गोरे", 10, y += 10);
+        doc.text("बहिणी: 1. सुरेखा विजय सुरोशे (खलाल पिंपरी), 2. अनिता नितीन पाडळे (सुरेशनगर)", 10, y += 10);
+        doc.text("काका: 1. दत्तात्रय निवृत्ती पठाडे (अंतरवली, शेवगाव)", 10, y += 10);
+        doc.text("मामा: सुदाम विखे (सोनविहिर)", 10, y += 10);
+
+        // Open PDF in a New Tab
+        window.open(doc.output("bloburl"), "_blank");
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
